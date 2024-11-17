@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 text-white p-6">
+            <h2 class="text-2xl font-semibold mb-6">ToDoApp</h2>
+            <ul>
+                <li><button id="show-all-tasks" class="w-full py-2 px-3 mb-2 rounded-lg hover:bg-gray-700">Todas as Tarefas</button></li>
+                <li><button id="show-graph" class="w-full py-2 px-3 mb-2 rounded-lg hover:bg-gray-700">Gráfico</button></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <h1 class="text-4xl font-semibold text-gray-800 mb-6">Suas Tarefas</h1>
+
+            <!-- Gráfico de Tarefas do Dia -->
+            <div id="chart-container" class="hidden">
+                <canvas id="taskChart" class="w-full h-96"></canvas>
+            </div>
+
+            <!-- Tabela de Tarefas -->
+            <div id="task-list-container">
+                <div class="flex justify-between mb-4">
+                    <input id="search-input" type="text" placeholder="Pesquisar Tarefas..." class="w-full border border-gray-300 rounded-lg" style="padding: 5px; height: 32px;" />
+
+
+                    <button id="add-task-btn" class="bg-green-500 text-white rounded-lg hover:bg-green-600" style="padding: 5px; height: 32px;">Adicionar</button>
+                </div>
+
+                <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+                    <table id="task-list" class="min-w-full table-auto text-gray-600">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="p-3 text-left text-sm font-semibold">Tarefa</th>
+                                <th class="p-3 text-left text-sm font-semibold">Hora</th>
+                                <th class="p-3 text-left text-sm font-semibold">Categoria</th>
+                                <th class="p-3 text-left text-sm font-semibold">Data</th>
+                                <th class="p-3 text-left text-sm font-semibold">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- As tarefas serão inseridas aqui via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Adicionar Tarefa -->
+    <div id="add-task-modal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h3 class="text-2xl mb-4">Adicionar Tarefa</h3>
+            <input id="task-input" type="text" placeholder="Descrição da Tarefa" class="w-full p-3 mb-4 border border-gray-300 rounded-md" />
+            <input id="task-time" type="time" class="w-full p-3 mb-4 border border-gray-300 rounded-md" />
+            <select id="task-category" class="w-full p-3 mb-4 border border-gray-300 rounded-md">
+                <option value="" disabled selected>Selecione a Categoria</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudo">Estudo</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Casa">Casa</option>
+                <option value="Saúde">Saúde</option>
+            </select>
+            <button id="save-task-btn" class="bg-blue-500 text-white p-3 rounded-md">Salvar</button>
+            <button id="close-task-modal-btn" class="bg-red-500 text-white p-3 rounded-md ml-2">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Edição -->
+    <div id="edit-modal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h3 class="text-2xl mb-4">Editar Tarefa</h3>
+            <input id="edit-task-input" type="text" class="w-full p-3 mb-4 border border-gray-300 rounded-md" />
+            <input id="edit-task-time" type="time" class="w-full p-3 mb-4 border border-gray-300 rounded-md" />
+            <select id="edit-task-category" class="w-full p-3 mb-4 border border-gray-300 rounded-md">
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudo">Estudo</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Casa">Casa</option>
+                <option value="Saúde">Saúde</option>
+            </select>
+            <button id="save-task-edit-btn" class="bg-blue-500 text-white p-3 rounded-md">Salvar</button>
+            <button id="close-modal-btn" class="bg-red-500 text-white p-3 rounded-md ml-2">Fechar</button>
+        </div>
+    </div>
+
+</body>
+</html>
