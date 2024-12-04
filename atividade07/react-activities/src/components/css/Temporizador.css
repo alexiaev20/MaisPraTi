@@ -1,0 +1,62 @@
+/*  principais para o container do temporizador */
+.temporizador-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* título exibindo o tempo */
+  .temporizador-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /*  gerais dos botões */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+  }
+  
+  /* botão "Iniciar" */
+  .botao-iniciar {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .botao-iniciar:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /*botão "Pausar" */
+  .botao-pausar {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .botao-pausar:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+  }
+  
+  /*  botão "Reiniciar" */
+  .botao-reiniciar {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .botao-reiniciar:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+  }
+  
+  /* Efeito de hover para todos os botões */
+  button:hover {
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,85 @@
+/* corpo */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Container principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.app-header {
+  background-color: #b700ff;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.app-header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+
+/* Conteúdo principal */
+.app-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Menu */
+.app-menu {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+}
+
+.app-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-menu ul li {
+  margin: 10px 0;
+}
+
+.app-menu ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1em;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-menu ul li a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Rodapé */
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9em;
+}

@@ -1,0 +1,60 @@
+/* Estilos para o container principal */
+.requisicao-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para o título */
+  h1 {
+    font-size: 2rem;
+    color: #6a4f96; /* Roxo suave */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para o texto de carregamento */
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+  }
+  
+  /* Estilos para a lista de posts */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Estilos para cada item da lista de posts */
+  li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito de hover nos itens da lista */
+  li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilos para o botão de recarregar */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #9b4dca; /* Roxo claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito de hover no botão de recarregar */
+  button:hover {
+    background-color: #7b2e8d; /* Roxo mais escuro */
+  }
+  

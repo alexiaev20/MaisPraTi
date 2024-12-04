@@ -1,0 +1,77 @@
+/* Estilos para o container principal da lista de tarefas */
+.lista-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para o título */
+  h1 {
+    font-size: 2rem;
+    color: #6a4f96; /* Cor roxa suave */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para o campo de entrada de novas tarefas */
+  input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para o botão de adicionar tarefa */
+  button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #9b4dca; /* Roxo claro */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito de hover nos botões */
+  button:hover {
+    background-color: #7b2e8d; /* Roxo mais escuro */
+  }
+  
+  /* Estilos para a lista de tarefas */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para cada item de tarefa */
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para o texto da tarefa */
+  span {
+    font-size: 1.2rem;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  /* Tarefa concluída com texto riscado */
+  span.concluida {
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  /* Estilos para os botões de concluir e remover */
+  button + button {
+    margin-left: 10px;
+  }
+  

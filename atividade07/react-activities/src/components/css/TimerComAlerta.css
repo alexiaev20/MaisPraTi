@@ -1,0 +1,59 @@
+/* principais do timer */
+div {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Título do timer */
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /*  input de tempo */
+  input[type="number"] {
+    width: 100px;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /*botões */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  /* Mudança de cor ao passar o mouse */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Desabilitar botão de input enquanto o timer estiver ativo */
+  input[disabled] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Layout responsivo para telas menores */
+  @media (max-width: 600px) {
+    input[type="number"] {
+      width: 80px;
+    }
+    
+    button {
+      padding: 8px 15px;
+    }
+  }
+  

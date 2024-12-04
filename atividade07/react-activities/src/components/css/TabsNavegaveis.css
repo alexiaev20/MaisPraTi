@@ -1,0 +1,81 @@
+/* Estilos principais para o container das abas */
+.tabs-container {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /*  título da seção de Tabs */
+  .tabs-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .tabs-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*  botões das abas */
+  .tab-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid transparent;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .tab-button:hover {
+    background-color: #ddd;
+  }
+  
+  /*  botão ativo */
+  .tab-button.active {
+    background-color: #6a4f96; 
+    color: white;
+    border-color: #6a4f96;
+  }
+  
+  /* conteúdo das abas */
+  .tabs-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* títulos dentro do conteúdo das abas */
+  .tabs-content h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  /* links */
+  a {
+    color: #6a4f96;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* responsivos para telas menores */
+  @media (max-width: 768px) {
+    .tabs-buttons {
+      flex-direction: column;
+    }
+  
+    .tab-button {
+      margin: 5px 0;
+    }
+  }
+  
