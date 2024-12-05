@@ -1,0 +1,23 @@
+package com.exemplo.exercicios.controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/palindromo")
+public class PalindromeController {
+
+    @GetMapping
+    public ResponseEntity<String> isPalindrome(@RequestParam String word) {
+        String cleanedWord = word.toLowerCase().replaceAll("[^a-zA-Z]", "");
+        String reversedWord = new StringBuilder(cleanedWord).reverse().toString();
+        if (cleanedWord.equals(reversedWord)) {
+            return ResponseEntity.ok(word + " é um palíndromo.");
+        } else {
+            return ResponseEntity.ok(word + " não é um palíndromo.");
+        }
+    }
+}

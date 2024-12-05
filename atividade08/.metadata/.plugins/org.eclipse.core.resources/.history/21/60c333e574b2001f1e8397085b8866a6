@@ -1,0 +1,5 @@
+package com.exemplo.exercicios.controllers;
+
+public class GuessingGameController {
+
+}

@@ -1,0 +1,5 @@
+package com.exemplo.exercicios.utils;
+
+public class PalindromeUtil {
+
+}

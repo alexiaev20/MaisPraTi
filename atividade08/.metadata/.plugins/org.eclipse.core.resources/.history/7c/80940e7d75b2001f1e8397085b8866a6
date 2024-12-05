@@ -1,0 +1,9 @@
+package com.exemplo.exercicios.utils;
+
+public class PalindromeUtil {
+    public static boolean isPalindrome(String word) {
+        String cleanedWord = word.toLowerCase().replaceAll("[^a-zA-Z]", "");
+        String reversedWord = new StringBuilder(cleanedWord).reverse().toString();
+        return cleanedWord.equals(reversedWord);
+    }
+}
